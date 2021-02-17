@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcs-curler
+spec:
+  selector:
+    matchLabels:
+      app: mcs-curler
+  template:
+    metadata:
+      labels:
+        app: mcs-curler
+    spec:
+      containers:
+      - name: mcs-curler
+        image: busybox:1.32.1
+        imagePullPolicy: IfNotPresent
+        command: ["/bin/sh", "-c", "while sleep 1; do wget http://nginx -O /dev/null; done"]
