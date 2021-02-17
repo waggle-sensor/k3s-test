@@ -60,12 +60,28 @@ kubectl logs -f svc/nginx
 10.42.0.3 - - [17/Feb/2021:16:02:07 +0000] "GET / HTTP/1.1" 200 612 "-" "Wget" "-"
 ```
 
-You should be seeing wget 
+You should be seeing wget logs here
 
 ```sh
 kubectl logs -f deployment/curler
 ```
 
+```text
+Connecting to nginx (10.43.26.24:80)
+saving to '/dev/null'
+null                 100% |********************************|   612  0:00:00 ETA
+'/dev/null' saved
+ok <-- look for ok
+```
+
 ```sh
 kubectl logs -f deployment/mcs-curler
+```
+
+```text
+Connecting to apache.org (207.244.88.140:80)
+saving to '/dev/null'
+null                 100% |********************************| 86012  0:00:00 ETA
+'/dev/null' saved
+ok <-- look for ok
 ```
