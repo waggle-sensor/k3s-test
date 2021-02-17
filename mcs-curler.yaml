@@ -15,4 +15,5 @@ spec:
       - name: mcs-curler
         image: busybox:1.32.1
         imagePullPolicy: IfNotPresent
-        command: ["/bin/sh", "-c", "while sleep 1; do wget http://mcs.anl.gov -O /dev/null && echo ok; done"]
+        # I know this isn't MCS... but MCS redirects to HTTPS which busybox's wget doesn't implement - so I used apache.org instead.
+        command: ["/bin/sh", "-c", "while sleep 1; do wget http://apache.org -O /dev/null && echo ok; done"]
