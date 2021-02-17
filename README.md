@@ -87,3 +87,5 @@ null                 100% |********************************| 86012  0:00:00 ETA
 '/dev/null' saved
 ok <-- look for ok
 ```
+
+(Yes, I know it's called mcs-curler but is hitting apache.org... I didn't feel like renaming everything.)
