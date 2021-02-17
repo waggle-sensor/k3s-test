@@ -15,4 +15,4 @@ spec:
       - name: curler
         image: busybox:1.32.1
         imagePullPolicy: IfNotPresent
-        command: ["/bin/sh", "-c", "while sleep 1; do wget http://nginx -O /dev/null; done"]
+        command: ["/bin/sh", "-c", "while sleep 1; do wget http://nginx -O /dev/null && echo ok; done"]
