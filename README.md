@@ -1,6 +1,6 @@
 # k3s Test
 
-## Deploying objects to k3s
+## Deploying objects to a running k3s cluster
 
 ```sh
 kubectl apply -f https://raw.githubusercontent.com/waggle-sensor/k3s-test/main/nginx.yaml
