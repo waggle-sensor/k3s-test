@@ -44,7 +44,7 @@ mcs-curler-84978d6986-nf4ff   1/1     Running   0          58s
 nginx-76ccf9dd9d-lrmrb        1/1     Running   0          58s
 ```
 
-## Checking logs
+## Checking nginx / curler logs for local connectivity
 
 You should be seeing GET request logs showing up from the nginx service.
 
@@ -73,6 +73,8 @@ null                 100% |********************************|   612  0:00:00 ETA
 '/dev/null' saved
 ok <-- look for ok
 ```
+
+## Checking nginx / curler logs for internet connectivity
 
 ```sh
 kubectl logs -f deployment/mcs-curler
